@@ -91,6 +91,8 @@ let rec length = function
 
 length [1;2;5]
 
+let yys = 3
+
 //factorial
 //let rec factorial n =
 //        if n < 2 then
@@ -98,10 +100,12 @@ length [1;2;5]
 //        else
 //            n * factorial (n-1)
 
-
+let yy = 2
 
  //Piping
- sin 7.
+ //sin 7.
+
+ let xxx = 22
  
  //7. |> sin
 
