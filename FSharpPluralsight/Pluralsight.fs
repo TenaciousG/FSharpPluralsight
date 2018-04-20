@@ -91,22 +91,66 @@ let rec length = function
 
 length [1;2;5]
 
-let yys = 3
-
 //factorial
-//let rec factorial n =
-//        if n < 2 then
-//            1
-//        else
-//            n * factorial (n-1)
+let rec factorial n =
+        if n < 2 then
+            1
+        else
+            n * factorial (n-1)
 
-let yy = 2
+ //Piping, works for unary functions (functions that take 1 parameter)
+sin 7. 
+7. |> sin
 
- //Piping
- //sin 7.
+//this will not work, since multiply operator takes two parameters:
+//7. |> sin |> * 2.
+//partial application for binary operators
+7. |> sin |> ((*)2.)
 
- let xxx = 22
- 
- //7. |> sin
+[1;2;3;4]
+    |> List.filter (fun i -> i % 2 = 0) //filter only even values
+    |> List.map ((*)2)
+    |> List.sum //12
 
- //7. |> sin
+sin 2. + 1. // sin of 2, plus 1
+sin (2. + 1.) //sin of 3
+sin <| 2. + 1. //sin of 3
+
+//also equals:
+min 12 7
+12 |> min <| 7
+12 |> min 7
+
+//Double and triple pipe operators
+(12,7) ||> min //pipes two arguments into a binary function
+min <|| (12,7) //pipes two arguments into a binary function
+//(1,2,3) |||> someTernaryFunction //pipes three arguments into a ternary function
+
+
+//Forward composition Operator  >>
+// can link (compose) functions that have matching argument types.
+// It's like piping but without having the arguments yet
+// x >> y
+// y << x
+// produce a new function
+let minus1 x = x - 1
+let times2 = (*) 2
+
+minus1 9
+times2 8
+
+times2 (minus1 9) //16
+let minus1ThenTimes2 = times2 << minus1
+minus1ThenTimes2 9 //16
+let minus1ThenTimes2_2 = minus1 >> times2
+minus1ThenTimes2_2 9 //16
+(times2 << minus1) 9  //16
+times2 << minus1 <| 9 //16
+
+9 |> minus1 |> times2  //also equivalent
+//times2 <| minus1 <| 9 //this doesnt work for some reason
+
+//Sequence * equivalent to IEnumerable in C#
+let sequenceRange = seq {1.0..100.0}
+Seq.sum sequenceRange
+//List.sum sequenceRange //cannot use list functions on sequence
