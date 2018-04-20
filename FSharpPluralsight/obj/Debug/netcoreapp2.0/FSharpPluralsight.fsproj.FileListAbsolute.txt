@@ -1,0 +1,8 @@
+C:\Git\Projects\F#\FSharpPluralsight\FSharpPluralsight\bin\Debug\netcoreapp2.0\FSharpPluralsight.deps.json
+C:\Git\Projects\F#\FSharpPluralsight\FSharpPluralsight\bin\Debug\netcoreapp2.0\FSharpPluralsight.runtimeconfig.json
+C:\Git\Projects\F#\FSharpPluralsight\FSharpPluralsight\bin\Debug\netcoreapp2.0\FSharpPluralsight.runtimeconfig.dev.json
+C:\Git\Projects\F#\FSharpPluralsight\FSharpPluralsight\bin\Debug\netcoreapp2.0\FSharpPluralsight.dll
+C:\Git\Projects\F#\FSharpPluralsight\FSharpPluralsight\bin\Debug\netcoreapp2.0\FSharpPluralsight.pdb
+C:\Git\Projects\F#\FSharpPluralsight\FSharpPluralsight\obj\Debug\netcoreapp2.0\FSharpPluralsight.fsprojResolveAssemblyReference.cache
+C:\Git\Projects\F#\FSharpPluralsight\FSharpPluralsight\obj\Debug\netcoreapp2.0\FSharpPluralsight.dll
+C:\Git\Projects\F#\FSharpPluralsight\FSharpPluralsight\obj\Debug\netcoreapp2.0\FSharpPluralsight.pdb
