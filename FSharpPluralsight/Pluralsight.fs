@@ -154,3 +154,26 @@ times2 << minus1 <| 9 //16
 let sequenceRange = seq {1.0..100.0}
 Seq.sum sequenceRange
 //List.sum sequenceRange //cannot use list functions on sequence
+
+
+//Data
+// 1 + 3.15 --int and float does not compare/compile
+1. + 3.15
+
+//not is not !
+let x = not true //false
+
+//string indexing
+"this is a string".[0] // t
+"this is a string".[3..5] // s i
+"this is a string".[..5] // this i
+"this is a string".[3..] // s is a string
+
+//Core.String namespace - string tools
+String.forall System.Char.IsDigit "03249" //true
+String.forall System.Char.IsDigit "03249s" //false
+
+String.init 10 (fun i -> i * 10 |> string) //builds a new string, taking the numbers 0 to 9 and applying the int to string function on them.
+
+//convert int to string with pipes
+3 |> string //3
